@@ -1,0 +1,345 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้ไฟฟ้า",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "มีจากแหล่งอื่น(ต่อสายไฟจากส่วนกลาง)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "มีจากแหล่งอื่น"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้ไฟฟ้า"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้ไฟฟ้า",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "มีแต่มีการต่อพ่วงจากบ้านของ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "มีจากแหล่งอื่น"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้ไฟฟ้า"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้ไฟฟ้า",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "มีแต่มีการต่อพ่วงจากบ้านของ(262)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "มีจากแหล่งอื่น"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้ไฟฟ้า"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ซิ้อ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ซื้อ"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ซือ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ซื้อ"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "น้ำตูหยอดเหรียญ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "น้ำตู้หยอดเหรียญ"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "น้ำจากหมู่บ้า"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "น้ำจากหมู่บ้าน"
+      }
+    ],
+    "description": "Mass edit cells in column ข้อมูลการใช้น้ำบริโภค-แหล่งที่มา"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำอุปโภค",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "(",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column ข้อมูลการใช้น้ำอุปโภค by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ข้อมูลการใช้น้ำอุปโภค 2",
+    "expression": "grel:replace(value,')','')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ข้อมูลการใช้น้ำอุปโภค 2 using expression grel:replace(value,')','')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2(งาน)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "งาน2"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "3งาน"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "งาน3"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "4ไร่2งาน"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4ไร่งาน2"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "4ไร่งาน2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4งาน2"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8ไร่2งาน"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "8งาน2"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "9ไร่2งาน"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "9งาน2"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "25-30"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "25งาน30"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "25~30"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "25งาน30"
+      }
+    ],
+    "description": "Mass edit cells in column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "งาน",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column จำนวนที่ดินทำกิน (ไร่)-เป็นเจ้าของ by separator"
+  }
+]
