@@ -1,0 +1,13 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [100.879961, 19.422108]
+  },
+  "properties": {
+    "name": "บ้านเจดีย์",
+    "Tambon" : "ส้าน",
+    "Amphoe" : "ปัว",
+    "Province" : "น่าน"
+  }
+}
